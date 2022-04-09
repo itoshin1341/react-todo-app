@@ -1,14 +1,18 @@
-import React, { StrictMode } from "react";
+import React, { StrictMode, useState } from "react";
 import ColofulMessage from "./components/ColorfulMessage";
 
 const App = () => {
-  const onClickButton = () => alert();
+  const onClickCountUp = () => {
+    setNum(num + 1);
+  };
+  const [num, setNum] = useState(0);
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは！</h1>
       <ColofulMessage color="blue">お元気ですか？</ColofulMessage>
       <ColofulMessage color="pink">元気です！</ColofulMessage>
-      <button onClick={onClickButton}>ボタン</button>
+      <button onClick={onClickCountUp}>カウントアップ</button>
+      <p>{num}</p>
     </>
   );
 };
