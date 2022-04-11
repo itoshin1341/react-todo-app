@@ -3,7 +3,7 @@ import ColofulMessage from "./components/ColorfulMessage";
 
 const App = () => {
   const [num, setNum] = useState(0);
-  const [faceShowFlag, setFaceShowFlag] = useState(true);
+  const [faceShowFlag, setFaceShowFlag] = useState(false);
   const onClickCountUp = () => {
     setNum(num + 1);
   };
@@ -16,11 +16,11 @@ const App = () => {
       <br />
       <button>on/off</button>
       <p>{num}</p>
-      <p>( ・∇・)</p>
+      {faceShowFlag && <p>( ・∇・)</p>}
     </>
   );
 };
 
 export default App;
 
-// Lesson47.　2min 22second より視聴する。
+// Lesson47.　3min 30second より視聴する。
